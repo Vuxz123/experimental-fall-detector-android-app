@@ -18,4 +18,18 @@
     <string name="live">Live</string>
     <string name="collection">Collection</string>
     <string name="collecting">Share sensor data with the emergency contact (requires restart)</string>
+    <string name="comparison_of_low_complexity_fall_detection_algorithms_for_body_attached_accelerometers">Comparison of low-complexity fall detection algorithms for body attached accelerometers</string>
+    <string name="the_fall_detection_is_based_upon_the_algorithm_number_2_described_in">The fall detection is based upon the algorithm number 2 described in</string>
+    <string name="keep_your_device_charged_at_all_times">• Keep your device charged at all times.</string>
+    <string name="for_optimal_performance_to_reduce_the_number_of_false_alarms_and_the_number_of_undetected_falls_carry_the_device_close_to_your_waist_a_trouser_pocket_a_belt_clip_etc">• For optimal performance (to reduce the number of false alarms and the number of undetected falls) carry the device close to your waist (a trouser pocket, a belt clip, etc.).</string>
+    <string name="the_app_will_start_automatically_when_the_phone_is_turned_on">• The app will start automatically when the phone is turned on.</string>
+    <string name="if_the_sms_contains_the_word_alarm_instead_it_will_play_back_an_alarm_sound">• If the SMS contains the word ALARM instead, it will play back an alarm sound.</string>
+    <string name="an_sms_from_that_number_with_the_word_position_in_the_content_will_be_replied_to_automatically_with_the_geographical_position_if_available">• An SMS from that number with the word POSITION in the content will be replied to automatically with the geographical position (if available).</string>
+    <string name="calls_from_that_number_will_be_answered_automatically">• Calls from that number will be answered automatically.</string>
+    <string name="make_sure_to_configure_the_emergency_phone_number_for_the_app_to_call_automatically_when_a_fall_is_detected">• Make sure to configure the emergency phone number for the app to call automatically when a fall is detected.</string>
+    <string name="authored_by_maarit_kangas_antti_konttila_per_lindgren_ilkka_winblad_timo_j_ms">authored by Maarit Kangas, Antti Konttila, Per Lindgren, Ilkka Winblad, Timo Jämsä</string>
+    <string name="published_in_gait_and_posture_28_2008_by_elsevier">published in Gait and Posture 28 (2008) by Elsevier</string>
+    <string name="information">INFORMATION</string>
+    <string name="status">Status</string>
+    <string name="app_name">Fall Detection App</string>
 </resources>

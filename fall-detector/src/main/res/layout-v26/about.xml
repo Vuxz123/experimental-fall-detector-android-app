@@ -13,26 +13,42 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_weight="1"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:orientation="vertical">
 
-            <View
-                android:id="@+id/view"
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center|center_horizontal|center_vertical"
+                android:cropToPadding="true"
+                android:outlineProvider="background"
+                android:requiresFadingEdge="horizontal|vertical"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/large_title"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="100dp"
                 android:orientation="vertical"
-                android:padding="20dp"
-                android:layout_marginBottom="300dp">
+                android:padding="20dp">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -54,6 +70,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
                         android:paddingBottom="8dp"
                         android:text="@string/make_sure_to_configure_the_emergency_phone_number_for_the_app_to_call_automatically_when_a_fall_is_detected"
                         android:textColor="@color/black"
@@ -62,6 +79,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
                         android:paddingBottom="8dp"
                         android:text="@string/calls_from_that_number_will_be_answered_automatically"
                         android:textColor="@color/black"
@@ -70,6 +88,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
                         android:paddingBottom="8dp"
                         android:text="@string/an_sms_from_that_number_with_the_word_position_in_the_content_will_be_replied_to_automatically_with_the_geographical_position_if_available"
                         android:textColor="@color/black"
@@ -78,6 +97,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
                         android:paddingBottom="8dp"
                         android:text="@string/if_the_sms_contains_the_word_alarm_instead_it_will_play_back_an_alarm_sound"
                         android:textColor="@color/black"
@@ -86,6 +106,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
                         android:paddingBottom="8dp"
                         android:text="@string/the_app_will_start_automatically_when_the_phone_is_turned_on"
                         android:textColor="@color/black"
@@ -94,6 +115,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
                         android:paddingBottom="8dp"
                         android:text="@string/for_optimal_performance_to_reduce_the_number_of_false_alarms_and_the_number_of_undetected_falls_carry_the_device_close_to_your_waist_a_trouser_pocket_a_belt_clip_etc"
                         android:textColor="@color/black"
@@ -102,6 +124,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
                         android:paddingBottom="8dp"
                         android:text="@string/keep_your_device_charged_at_all_times"
                         android:textColor="@color/black"
@@ -110,6 +133,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
                         android:paddingBottom="8dp"
                         android:text="@string/the_fall_detection_is_based_upon_the_algorithm_number_2_described_in"
                         android:textColor="@color/black"
@@ -118,6 +142,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
                         android:paddingBottom="8dp"
                         android:text="@string/comparison_of_low_complexity_fall_detection_algorithms_for_body_attached_accelerometers"
                         android:textColor="@color/black"
@@ -127,6 +152,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
                         android:paddingBottom="8dp"
                         android:text="@string/authored_by_maarit_kangas_antti_konttila_per_lindgren_ilkka_winblad_timo_j_ms"
                         android:textColor="@color/black"
@@ -135,6 +161,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
                         android:paddingBottom="8dp"
                         android:text="@string/published_in_gait_and_posture_28_2008_by_elsevier"
                         android:textColor="@color/black"
@@ -145,31 +172,41 @@
         </LinearLayout>
     </ScrollView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/emergency_wrapper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/top_corner_rounded_border"
-        android:paddingStart="10dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingBottom="1dp"
+        android:clipToPadding="false"
+        android:isScrollContainer="false"
+        android:layoutDirection="ltr"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/emergency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
-            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="@string/emergency"
             app:icon="@android:drawable/ic_dialog_alert"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="@string/status"
+            android:textAlignment="center"
+            android:textSize="@dimen/medium_text" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,8 +28,7 @@ class About : Fragment(), View.OnClickListener {
     ): View? {
         val binding = inflater.inflate(R.layout.about, container, false)
         this.binding = binding
-        val web = binding.findViewById<View>(R.id.information) as WebView
-        web.loadUrl("file:///android_asset/about.html")
+
         val emergency = binding.findViewById<View>(R.id.emergency) as Button
         emergency.setOnClickListener(this)
 
@@ -66,10 +65,10 @@ class About : Fragment(), View.OnClickListener {
         val statusText: String
         val statusColor: Int
         if (permitted(request)) {
-            statusText = "Permissions: Granted"
+            statusText = "Status: Ready"
             statusColor = Color.GREEN
         } else {
-            statusText = "Permissions: Missing"
+            statusText = "Status: Missing"
             statusColor = Color.RED
         }
         val binding = this.binding ?: return
