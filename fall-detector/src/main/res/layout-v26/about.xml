@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray_400"
+    android:background="@color/gray_300"
     android:orientation="vertical"
     android:paddingBottom="?attr/actionBarSize"
     tools:context="com.ethnicthv.About">
@@ -25,6 +25,7 @@
 
             <ImageView
                 android:id="@+id/imageView"
+                android:paddingTop="20dp"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center|center_horizontal|center_vertical"
@@ -177,13 +178,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/top_corner_rounded_border"
+        android:layout_marginStart="10dp"
         android:clipToPadding="false"
         android:isScrollContainer="false"
         android:layoutDirection="ltr"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:id="@+id/emergency"
@@ -196,17 +198,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:text="@string/status"
-            android:textAlignment="center"
-            android:textSize="@dimen/medium_text" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

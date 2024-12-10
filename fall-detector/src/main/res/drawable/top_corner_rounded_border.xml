@@ -7,21 +7,20 @@
                 android:bottomLeftRadius="0dp"
                 android:bottomRightRadius="0dp"
                 android:topLeftRadius="16dp"
-                android:topRightRadius="0dp" />
+                android:topRightRadius="16dp" />
         </shape>
     </item>
     <item>
         <inset
-            android:insetRight="-4dp"
             android:insetBottom="-4dp">
 
             <shape>
                 <solid android:color="@color/gray_200" />
                 <corners
                     android:bottomLeftRadius="16dp"
-                    android:bottomRightRadius="0dp"
+                    android:bottomRightRadius="16dp"
                     android:topLeftRadius="16dp"
-                    android:topRightRadius="0dp" />
+                    android:topRightRadius="16dp" />
                 <stroke
 
                     android:width="4dp"

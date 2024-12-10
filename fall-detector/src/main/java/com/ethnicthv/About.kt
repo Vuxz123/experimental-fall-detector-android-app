@@ -72,11 +72,6 @@ class About : Fragment(), View.OnClickListener {
             statusColor = Color.RED
         }
         val binding = this.binding ?: return
-        val status = binding.findViewById<View>(R.id.status) as TextView
-        activity?.runOnUiThread {
-            status.text = statusText
-            status.setTextColor(statusColor)
-        }
     }
 
     private fun permitted(request: Boolean): Boolean {
