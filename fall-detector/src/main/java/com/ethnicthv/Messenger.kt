@@ -1,4 +1,4 @@
-package altermarkive.guardian
+package com.ethnicthv
 
 import android.Manifest
 import android.content.BroadcastReceiver
@@ -48,6 +48,7 @@ class Messenger : BroadcastReceiver() {
                     if (Contact.check(context, contact)) {
                         var prevent = false
                         if (content.contains("POSITION")) {
+                            Log.d(TAG, "Received a request for the current position")
                             Positioning.singleton?.trigger()
                             prevent = true
                         }

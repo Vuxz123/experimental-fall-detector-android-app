@@ -1,4 +1,4 @@
-package altermarkive.guardian
+package com.ethnicthv
 
 import android.Manifest
 import android.annotation.SuppressLint

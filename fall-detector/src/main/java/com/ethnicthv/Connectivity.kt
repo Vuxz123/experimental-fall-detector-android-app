@@ -1,4 +1,4 @@
-package altermarkive.guardian
+package com.ethnicthv
 
 import android.content.BroadcastReceiver
 import android.content.Intent

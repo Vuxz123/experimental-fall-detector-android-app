@@ -1,6 +1,6 @@
-package altermarkive.guardian
+package com.ethnicthv
 
-import altermarkive.guardian.databinding.MainBinding
+import com.ethnicthv.databinding.MainBinding
 import android.app.Dialog
 import android.content.Context
 import android.os.Bundle

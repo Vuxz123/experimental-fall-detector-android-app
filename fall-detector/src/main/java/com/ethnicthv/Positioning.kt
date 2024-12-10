@@ -1,4 +1,4 @@
-package altermarkive.guardian
+package com.ethnicthv
 
 import android.Manifest
 import android.content.Context
@@ -25,8 +25,10 @@ class Positioning private constructor(private val context: Guardian) : LocationL
     private val format: SimpleDateFormat = SimpleDateFormat("yyyy.MM.dd HH:mm:ss", Locale.US)
 
     internal fun trigger() {
+        Log.d("Positioning", "Triggering")
         enforce(context)
         synchronized(this) {
+            Log.d("Positioning", "Reset and sending message")
             reset(0, 0f)
             once = System.currentTimeMillis()
             replied = false
@@ -71,6 +73,7 @@ class Positioning private constructor(private val context: Guardian) : LocationL
     }
 
     override fun onLocationChanged(newLocation: Location) {
+        Log.d("Positioning", "onLocationChanged triggered")
         var location: Location = newLocation
         enforce(context)
         synchronized(this) {
@@ -84,9 +87,14 @@ class Positioning private constructor(private val context: Guardian) : LocationL
                     network = location
                 }
             }
-            val deadline = once + 120000
+
+            Log.d("Positioning", "onLocationChanged pass permission check")
+            val deadline = once + 1000
             val now = System.currentTimeMillis()
-            if (deadline <= now && !replied) {
+            Log.d("Positioning", "onLocationChanged ${deadline} <= ${now} && !${replied}")
+            if (!replied) {
+
+                Log.d("Positioning", "onLocationChanged pass deadline check")
                 val battery = Battery.level(context)
                 val message: String
                 if (accuracy(gps).isInfinite() && accuracy(network).isInfinite()) {
@@ -110,6 +118,7 @@ class Positioning private constructor(private val context: Guardian) : LocationL
                     message =
                         "Battery: $battery % Location ($time): $lat,$lon ~$accuracy m ^$altitude m $bearing deg $speed km/h http://maps.google.com/?q=${lat},${lon}"
                 }
+                Log.d("Positioning", "Sending message: $message")
                 Messenger.sms(context, Contact[context], message)
                 reset(METERS_10, MINUTES_10)
                 replied = true

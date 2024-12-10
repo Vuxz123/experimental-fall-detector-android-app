@@ -1,4 +1,4 @@
-package altermarkive.guardian
+package com.ethnicthv
 
 object Log {
     fun println(level: Int, tag: String, entry: String) {

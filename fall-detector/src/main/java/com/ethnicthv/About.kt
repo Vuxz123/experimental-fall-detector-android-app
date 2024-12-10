@@ -1,4 +1,4 @@
-package altermarkive.guardian
+package com.ethnicthv
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,9 @@ import android.Manifest
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Build
+import android.view.ViewTreeObserver
+import android.view.animation.AccelerateDecelerateInterpolator
+import android.view.animation.Interpolator
 import android.webkit.WebView
 import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
@@ -29,6 +32,7 @@ class About : Fragment(), View.OnClickListener {
         web.loadUrl("file:///android_asset/about.html")
         val emergency = binding.findViewById<View>(R.id.emergency) as Button
         emergency.setOnClickListener(this)
+
         return binding
     }
 
@@ -41,6 +45,21 @@ class About : Fragment(), View.OnClickListener {
     override fun onStart() {
         super.onStart()
         refreshPermissions(true)
+
+        val emergencyWrapper = binding?.findViewById<View>(R.id.emergency_wrapper)
+        Log.d(TAG, "onStart :: Emergency Wrapper Animation :: ${emergencyWrapper?.height}")
+        emergencyWrapper?.viewTreeObserver?.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                emergencyWrapper.viewTreeObserver.removeOnGlobalLayoutListener(this)
+                emergencyWrapper.translationY = emergencyWrapper.height.toFloat()
+                emergencyWrapper
+                    .animate()
+                    .translationY(0f)
+                    .setDuration(300)
+                    .setInterpolator(AccelerateDecelerateInterpolator())
+                    .start()
+            }
+        })
     }
 
     private fun refreshPermissions(request: Boolean) {

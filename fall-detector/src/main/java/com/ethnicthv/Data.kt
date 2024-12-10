@@ -1,4 +1,4 @@
-package altermarkive.guardian
+package com.ethnicthv
 
 import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase

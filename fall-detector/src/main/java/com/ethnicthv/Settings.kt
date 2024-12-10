@@ -1,4 +1,4 @@
-package altermarkive.guardian
+package com.ethnicthv
 
 import android.os.Bundle
 import androidx.preference.PreferenceFragmentCompat

@@ -12,8 +12,8 @@ android {
     compileSdkVersion 30
 
     defaultConfig {
-        applicationId "altermarkive.guardian"
-        minSdkVersion 16
+        applicationId "com.ethnicthv"
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode countCommits()
         versionName "0.0.0"

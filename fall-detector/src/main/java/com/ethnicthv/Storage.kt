@@ -1,4 +1,4 @@
-package altermarkive.guardian
+package com.ethnicthv
 
 import java.io.File
 import java.io.FileInputStream
